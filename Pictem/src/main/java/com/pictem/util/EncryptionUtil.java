@@ -16,7 +16,7 @@ import org.apache.commons.logging.LogFactory;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
-import com.pictem.comman.CommonConstant;
+import com.pictem.common.CommonConstant;
 import com.pictem.common.exception.BusinessException;
 import com.pictem.enums.CommonStateEnum;
 

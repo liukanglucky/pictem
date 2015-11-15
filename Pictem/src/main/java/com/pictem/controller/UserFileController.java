@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.pictem.comman.Constants;
+import com.pictem.common.Constants;
 import com.pictem.model.UserFile;
 import com.pictem.service.UserFileService;
 import com.pictem.util.*;

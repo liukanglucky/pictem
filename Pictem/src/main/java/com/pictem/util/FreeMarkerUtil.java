@@ -11,7 +11,7 @@ import java.util.Map;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
 
-import com.pictem.comman.CommonConstant;
+import com.pictem.common.CommonConstant;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
