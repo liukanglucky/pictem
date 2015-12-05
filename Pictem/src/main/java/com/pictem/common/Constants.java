@@ -58,4 +58,8 @@ public class Constants {
 	public static final String UPLOAD_FILE_PATH = LoadConfig.getUploadFilePath();//上传文件路径
 	
 	
+	public static void main(String[] args) {
+		System.out.println(Constants.UPLOAD_FILE_PATH);
+	}
+	
 }

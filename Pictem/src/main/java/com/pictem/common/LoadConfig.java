@@ -9,6 +9,86 @@ public class LoadConfig extends BaseConfig{
 	
 	private static String uploadFilePath;
 	
+	private static String sendUser;
+	
+	private static String sendUname;
+	
+	private static String sendPwd;
+	
+	private static String keySmtp;
+	
+	private static String valueSmtp;
+	
+	private static String keyProps;
+	
+	private static boolean valueProps;
+	
+	
+	
+	public static int getUploadType() {
+		return uploadType;
+	}
+
+	public static void setUploadType(int uploadType) {
+		LoadConfig.uploadType = uploadType;
+	}
+
+	public static String getSendUser() {
+		return sendUser;
+	}
+
+	public static void setSendUser(String sendUser) {
+		LoadConfig.sendUser = sendUser;
+	}
+
+	public static String getSendUname() {
+		return sendUname;
+	}
+
+	public static void setSendUname(String sendUname) {
+		LoadConfig.sendUname = sendUname;
+	}
+
+	public static String getSendPwd() {
+		return sendPwd;
+	}
+
+	public static void setSendPwd(String sendPwd) {
+		LoadConfig.sendPwd = sendPwd;
+	}
+
+	public static String getKeySmtp() {
+		return keySmtp;
+	}
+
+	public static void setKeySmtp(String keySmtp) {
+		LoadConfig.keySmtp = keySmtp;
+	}
+
+	public static String getValueSmtp() {
+		return valueSmtp;
+	}
+
+	public static void setValueSmtp(String valueSmtp) {
+		LoadConfig.valueSmtp = valueSmtp;
+	}
+
+	public static String getKeyProps() {
+		return keyProps;
+	}
+
+	public static void setKeyProps(String keyProps) {
+		LoadConfig.keyProps = keyProps;
+	}
+
+	public static boolean getValueProps() {
+		return valueProps;
+	}
+
+	public static void setValueProps(boolean valueProps) {
+		LoadConfig.valueProps = valueProps;
+	}
+
 	private static String FILE_PATH = "conf/constant.properties";
 
 	static {

@@ -26,7 +26,7 @@ public abstract class BaseConfig {
 	private static final Logger LOG = Logger.getLogger(BaseConfig.class);
 
 	/** 缓存配置文件中配置的, 但子类中没有对应字段的参数 **/
-	private static Map<String, String> configParamsMap = new ConcurrentHashMap<String, String>();
+	public static Map<String, String> configParamsMap = new ConcurrentHashMap<String, String>();
 
 	/**
 	 * 加载属性文件中的值
@@ -46,6 +46,9 @@ public abstract class BaseConfig {
 			map = processMapKey(map);
 			
 			Field[] fields = baseConfig.getClass().getDeclaredFields();
+			
+			System.out.println(fields);
+			
 			String value = "";
 			for (Field field : fields) {
 				if (!Modifier.isStatic(field.getModifiers())) {
