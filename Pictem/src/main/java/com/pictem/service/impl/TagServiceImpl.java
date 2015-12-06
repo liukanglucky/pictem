@@ -11,6 +11,7 @@ import com.pictem.service.TagService;
 
 @Service
 public class TagServiceImpl implements TagService{
+	
 	@Autowired
 	private TagDao tagDao;
 

@@ -11,6 +11,7 @@ import com.pictem.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService{
+	
 	@Autowired
 	private UserDao userDao;
 	@Override
@@ -23,5 +24,17 @@ public class UserServiceImpl implements UserService{
 	public List<User> findAllUser() {
 		// TODO Auto-generated method stub
 		return userDao.findAllUser();
+	}
+
+	@Override
+	public int updateUser(User user) {
+		// TODO Auto-generated method stub
+		return userDao.updateUser(user);
+	}
+
+	@Override
+	public int delUser(int uid) {
+		// TODO Auto-generated method stub
+		return userDao.delUser(uid);
 	}
 }

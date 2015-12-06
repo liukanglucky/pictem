@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.pictem.dao.mongo.UserMg;
 import com.pictem.model.User;
 import com.pictem.service.impl.UserServiceImpl;
 
@@ -77,4 +78,13 @@ public class UserController {
         }  
         return "/test";  
     }  
+	
+	@RequestMapping("testmg")
+	public ModelAndView testmg(){
+		UserMg um  = new UserMg();
+		User u = new User();
+		u.setName("liukang2");
+		um.saveUser(u);
+		return null;
+	}
 }
