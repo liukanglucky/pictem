@@ -1,9 +1,7 @@
 /*!
  * pull to refresh v3.0
- *author:wallace
+ *author:wangyubo
  *2015-10-15
- *qq447363121
- *陈国华
  */
 var refresher = {
 	info: {
