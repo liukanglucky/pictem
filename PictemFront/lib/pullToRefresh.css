@@ -1,105 +1,101 @@
 @charset "utf-8";
-/*!
- * pull to refresh v3.0
- *author:wangyubo
- *2015-10-15
- */
+/*
+//author wallace 华dee
+//2015 7 3 
+//qq447363121陈国华
+*/
 #wrapper {
 	position: absolute;
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	background: #333;
 }
-.scroller {
+#scroller {
 	position: absolute;
 	z-index: 1;
+	/*	-webkit-touch-callout:none;*/
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	width: 100%;
 	padding: 0;
 }
-.scroller ul {
+#scroller ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	width: 100%;
 	text-align: left;
 }
-.scroller li {
-	padding: 5px;
+#scroller li {
+	padding: 0 10px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #fff;
+	background-color: #fafafa;
+	font-size: 14px;
 }
-.pullDown, .pullUp {
+#pullDown, #pullUp {
 	text-align: center;
 	height: 40px;
 	line-height: 40px;
 	font-size: 12px;
 	color: #888;
 	font-family: Arial, Microsoft YaHei;
-	background-color: #333;
-}
-.pullDown .pullDownIcon, .pullUp .pullUpIcon {
-	background: url("arrow.png") no-repeat;
-	width: 24px;
-	height: 24px;
-	position: absolute;
-	margin-top: 8px;
-	margin-bottom: 8px;
-	background-position: center;
-	margin-left: 30%;
-	background-size: auto 100%;
-	-webkit-background-size: auto 100%;
-	-webkit-transition-property: -webkit-transform;
-	-webkit-transition-duration: 250ms;
-	-moz-background-size: auto 100%;
-	-moz-transition-property: -moz-transform;
-	-moz-transition-duration: 250ms;
-}
-.pullDown .pullDownIcon {
+} #pullUp{ display:block;}
+.loader {
+	display: inline-block;
+	font-size: 0px;
+	padding: 0px;
 	display: none;
-	-webkit-transform: rotate(0deg) translateZ(0);
-	-moz-transform: rotate(0deg) translateZ(0);
 }
-.pullUp .pullUpIcon {
-	-webkit-transform: rotate(-180deg) translateZ(0);
-	-moz-transform: rotate(-180deg) translateZ(0);
+.loader span {
+	vertical-align: middle;
+	border-radius: 100%;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 2px;
+	-webkit-animation: loader 0.8s linear infinite alternate;
+	animation: loader 0.8s linear infinite alternate;
 }
-.pullDown.flip .pullDownIcon {
-	-webkit-transform: rotate(-180deg) translateZ(0);
-	-moz-transform: rotate(-180deg) translateZ(0);
+.loader span:nth-child(1) {
+	-webkit-animation-delay: -1s;
+	animation-delay: -1s;
+	background: rgba(245, 103, 115,0.6);
 }
-.pullUp.flip .pullUpIcon {
-	-webkit-transform: rotate(0deg) translateZ(0);
-	-moz-transform: rotate(0deg) translateZ(0);
+.loader span:nth-child(2) {
+	-webkit-animation-delay: -0.8s;
+	animation-delay: -0.8s;
+	background: rgba(245, 103, 115,0.8);
 }
-.pullDown.loading .pullDownIcon, .pullUp.loading .pullUpIcon {
-	background-image: url(loader.png);
-	background-size: 100% auto;
-	background-position: 0 100%;
-	-webkit-transform: rotate(0deg) translateZ(0);
-	-webkit-transition-duration: 0ms;
-	-webkit-animation-name: loading;
-	-webkit-animation-duration: 2s;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-	-moz-transform: rotate(0deg) translateZ(0);
-	-moz-transition-duration: 0ms;
-	-moz-animation-name: loading;
-	-moz-animation-duration: 2s;
-	-moz-animation-iteration-count: infinite;
-	-moz-animation-timing-function: linear;
+.loader span:nth-child(3) {
+	-webkit-animation-delay: -0.26666s;
+	animation-delay: -0.26666s;
+	background: rgba(245, 103, 115,1);
 }
-@-webkit-keyframes loading {
+.loader span:nth-child(4) {
+	-webkit-animation-delay: -0.8s;
+	animation-delay: -0.8s;
+	background: rgba(245, 103, 115,0.8);
+}
+.loader span:nth-child(5) {
+	-webkit-animation-delay: -1s;
+	animation-delay: -1s;
+	background: rgba(245, 103, 115,0.4);
+}
+ @keyframes loader {
  from {
--webkit-transform:rotate(0deg) translateZ(0);
+transform: scale(0, 0);
 }
 to {
-	-webkit-transform: rotate(360deg) translateZ(0);
+	transform: scale(1, 1);
 }
 }
-@-moz-keyframes loading {
+@-webkit-keyframes loader {
  from {
--moz-transform:rotate(0deg) translateZ(0);
+-webkit-transform: scale(0, 0);
 }
 to {
-	-moz-transform: rotate(360deg) translateZ(0);
+	-webkit-transform: scale(1, 1);
 }
 }

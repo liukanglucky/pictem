@@ -1,0 +1,28 @@
+@font-face {
+    /*font-family: Amable;*/
+    /*src: url('fonts/Amable.ttf');*/
+    font-family: MilasianCircaMedium;
+    src: url('../fonts/MilasianCircaMedium.ttf');
+    /*font-family: Valerie-Medium;*/
+    /*src: url('fonts/Valerie-Medium.ttf');*/
+}
+
+.mainFrame {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    /*height: 100%;*/
+}
+
+.toolbar {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    /*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5f5f5f), color-stop(1, #131313));*/
+    background: #FFF;
+    border-top: 1px solid #e2e2e2;
+    z-index: 999;
+}
